@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv" dir="swe">
+  <head>
+    <meta charset="utf-8">
+    <title>TEST</title>
+    <link rel="stylesheet" href="teststyle1.css" type="text/css" />
+  </head>
+  <body class="body">
+
+    <div class="w3-content w3-display-container">
+      <img class="mySlides" src="C:\Users\Test\Documents\Spel Projekt\musssash.jpg" style="width:100%">
+      <img class="mySlides" src="C:\Users\Test\Documents\Spel Projekt\musstash.jpg" style="width:100%">
+      <img class="mySlides" src="C:\Users\Test\Documents\Spel Projekt\mustash.png" style="width:100%">
+      <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+  </body>
+</html>
